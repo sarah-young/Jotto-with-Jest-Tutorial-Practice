@@ -5,9 +5,10 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
-export default (props) => {
+const Congrats =  (props) => {
 
     if (props.success) {
       return(
@@ -23,3 +24,11 @@ export default (props) => {
   );
   }
 }
+
+Congrats.propTypes = {
+  success: PropTypes.bool.isRequired,
+}; // We expect this component to pass a prop type
+   // Called success that is boolean
+   //It is a required prop
+
+export default Congrats;
