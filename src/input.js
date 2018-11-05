@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Input extends Component {
   render() {
-    const contents = this.props.success //Why am I getting an unexpected token error here?
+    const contents = this.props.success
     ? null
     : (
     <form className="form-inline">
@@ -30,7 +30,7 @@ class Input extends Component {
 };
 
 const mapStateToProps = ({success}) => {
-  return {};
+  return { success };
 };
 
 
