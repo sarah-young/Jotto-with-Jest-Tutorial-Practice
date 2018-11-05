@@ -29,7 +29,7 @@ class Input extends Component {
   }
 };
 
-const mapStateToProps = ({success}) => {
+const mapStateToProps = ({ success }) => {
   return { success };
 };
 
