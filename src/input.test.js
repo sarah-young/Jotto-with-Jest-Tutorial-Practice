@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { findByTestAttr, storeFactory } from '../test/testUtils';
 import Input from './Input';
 
-const setup = (initialState={}) => {
+const setup = ( initialState={} ) => {
   const store = storeFactory(initialState);
   const wrapper = shallow(<Input store={store} />).dive(); // Need .dive() to reach "deeper" components
   return wrapper;
