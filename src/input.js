@@ -11,13 +11,13 @@ export class UnconnectedInput extends Component {
     this.submitGuessedWord = this.submitGuessedWord.bind(this);
   }
 
-
   submitGuessedWord(evt) {
     evt.preventDefault();
     const guessedWord = this.inputBox.current.value;
     if (guessedWord && guessedWord.length > 0) {
       this.props.guessWord(guessedWord)
     }
+      this.inputBox.current.value = '';
   }
 
   render() {
@@ -53,6 +53,5 @@ export class UnconnectedInput extends Component {
 const mapStateToProps = ({ success }) => {
   return { success };
 };
-
 
 export default connect(mapStateToProps, { guessWord })(UnconnectedInput);
